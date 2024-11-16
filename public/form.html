@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Post</title>
+    <style>
+      body{
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0 auto;
+      }
+
+      .createPostWrapper{
+        background-color: cadetblue;
+        color: aliceblue;
+        margin-bottom: 30px;
+        padding: 2px;
+        text-align: center;
+      }
+
+      .formWrapper{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .formElement {
+        padding-bottom: 20px;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+      }
+
+      input {
+        background-color: azure;
+        border: 3px dashed rgb(45, 45, 45);
+        min-height: 24px;
+        min-width: 500px;
+        padding: 5px;
+      }
+      input[type=text]:focus {
+        border: 3px solid black;
+      }
+
+      textarea{
+        background-color: azure;
+        border: 3px dashed rgb(45, 45, 45);
+        min-height: 200px;
+        min-width: 500px;
+        padding: 5px;
+        vertical-align: top;
+      }
+
+      textarea[type=text]:focus {
+        border: 3px solid black;
+      }
+
+      button {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;  
+      }
+    </style>
+  </head>
+  <body>
+    <div class="createPostWrapper">
+      <h1>Create Post</h1>
+    </div>
+    <div class="formWrapper">
+    <form action="/create/submit">
+      <div class="formElement">
+        <label for="title">
+          Title
+          <input id="title" name="title" type="text" />
+        </label>
+      </div>
+      <div class="formElement">
+        <label for="postText">
+          Text
+          <textarea id="postText" name="postText" type="text" ></textarea>
+        </label>
+      </div>
+      <div class="formElement">
+        <label for="author">
+          Author
+          <input id="author" name="author" type="text" />
+        </label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
